@@ -1,3 +1,5 @@
+collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
+
 spdWalk = 3;
 animIndex = 0;
 
