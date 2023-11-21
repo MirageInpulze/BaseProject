@@ -3,7 +3,7 @@
 randomize();
 
 global.GamePaused = false;
-
+global.textspeed = .75;
 room_goto(rVillage);
 
 

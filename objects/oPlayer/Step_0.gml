@@ -1,27 +1,9 @@
-var _inputH = keyboard_check(vk_right) - keyboard_check(vk_left);
-var _inputV = keyboard_check(vk_down) - keyboard_check(vk_up);
-var _inputD = point_direction(0,0,_inputH,_inputV);
-var _inputM = point_distance(0,0,_inputH,_inputV);
+_inputH = keyboard_check(vk_right) - keyboard_check(vk_left);
+_inputV = keyboard_check(vk_down) - keyboard_check(vk_up);
+_inputD = point_direction(0,0,_inputH,_inputV);
+_inputM = point_distance(0,0,_inputH,_inputV);
 
-if (!global.GamePaused)
-{
-	if (_inputM != 0)
-	{
-		direction = _inputD;	
-		image_speed = 1;
-	}
-	else
-	{
-		image_speed = 0;
-		animIndex = 0;
-	}
-}
-hSpeed = lengthdir_x(spdWalk*_inputM,_inputD);
-vSpeed = lengthdir_y(spdWalk*_inputM,_inputD);
-
-PlayerCollision();
-FourDirectionAnimate();
-
+if (!global.GamePaused) script_execute(state)
 
 
 

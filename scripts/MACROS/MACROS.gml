@@ -1,1 +1,3 @@
 #macro TILE_SIZE 16
+#macro RESOLUTION_W 640
+#macro RESOLUTION_H 320
