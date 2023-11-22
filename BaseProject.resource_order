@@ -38,7 +38,7 @@
     {"name":"sAttackIce","order":4,"path":"sprites/sAttackIce/sAttackIce.yy",},
     {"name":"PlayerCollision","order":6,"path":"scripts/PlayerCollision/PlayerCollision.yy",},
     {"name":"sBatAttack","order":3,"path":"sprites/sBatAttack/sBatAttack.yy",},
-    {"name":"Sprite30","order":7,"path":"sprites/Sprite30/Sprite30.yy",},
+    {"name":"sTextBox","order":7,"path":"sprites/sTextBox/sTextBox.yy",},
     {"name":"sSlimeAttack","order":1,"path":"sprites/sSlimeAttack/sSlimeAttack.yy",},
     {"name":"sQuestyIdle","order":11,"path":"sprites/sQuestyIdle/sQuestyIdle.yy",},
     {"name":"GameData","order":3,"path":"scripts/GameData/GameData.yy",},

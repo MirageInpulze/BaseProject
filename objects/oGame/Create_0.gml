@@ -4,6 +4,8 @@ randomize();
 
 global.GamePaused = false;
 global.textspeed = .75;
+
+surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
 room_goto(rVillage);
 
 

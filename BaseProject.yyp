@@ -59,7 +59,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"PlayerCollision","path":"scripts/PlayerCollision/PlayerCollision.yy",},},
     {"id":{"name":"sBatAttack","path":"sprites/sBatAttack/sBatAttack.yy",},},
-    {"id":{"name":"Sprite30","path":"sprites/Sprite30/Sprite30.yy",},},
+    {"id":{"name":"sTextBox","path":"sprites/sTextBox/sTextBox.yy",},},
     {"id":{"name":"sSlimeAttack","path":"sprites/sSlimeAttack/sSlimeAttack.yy",},},
     {"id":{"name":"sQuestyIdle","path":"sprites/sQuestyIdle/sQuestyIdle.yy",},},
     {"id":{"name":"GameData","path":"scripts/GameData/GameData.yy",},},
