@@ -1,4 +1,5 @@
 state = PlayerWalking;
+lastState = state
 collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
 
 spdWalk = 3;

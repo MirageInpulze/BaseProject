@@ -11,6 +11,4 @@ x2Target = RESOLUTION_W;
 lerpProgress = 0;
 textProgress = 0;
 
-message = "testing message";
-background = 0;
 

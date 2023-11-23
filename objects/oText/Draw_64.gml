@@ -7,7 +7,7 @@ draw_set_halign(-10);
 draw_set_valign(y1+8);
 draw_set_color(c_black);
 var _print = string_copy(message, 1, textProgress);
-draw_text_ext(65, y1+8, _print + "aaaaaaaaaaa aaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa",10,200);
+draw_text_ext(65, y1+8, _print, 10, 200);
 draw_set_color(c_white);
-draw_text(65, y1+7, _print);
+draw_text_ext(65, y1+7, _print, 10, 200);
 }
