@@ -1,7 +1,7 @@
 state = PlayerWalking;
 lastState = state
 collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
-
+textBoxDelay = 0;
 spdWalk = 3;
 animIndex = 0;
 

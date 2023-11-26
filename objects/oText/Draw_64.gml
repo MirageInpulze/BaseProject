@@ -8,13 +8,13 @@ draw_set_valign(y1+8);
 draw_set_color(c_black);
 var _print = string_copy(message, 1, textProgress);
 
-if (response[0] != -1) && (textProgress >= string_length(message))
+if (responses[0] != -1) && (textProgress >= string_length(message))
 {
-	for (var i =0; i < array_length(response); i++)
+	for (var i =0; i < array_length(responses); i++)
 	{
 		_print += "\n";
 		if (i == responseSelected) _print += "> ";
-		_print += response[i];
+		_print += responses[i];
 		if (i == responseSelected) _print += " <";
 		
 	}
