@@ -6,7 +6,9 @@ var _inputH = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _inputV = keyboard_check(vk_down) - keyboard_check(vk_up);
 var _inputD = point_direction(0,0,_inputH,_inputV);
 var _inputM = point_distance(0,0,_inputH,_inputV);
-
+	
+	if place_meeting(x + hSpeed, y, oBarrier) hSpeed = 0;
+	if place_meeting(x, y + vSpeed, oBarrier) vSpeed = 0;
 //Hori Tiles
 if (tilemap_get_at_pixel(collisionMap, x + hSpeed, y))
 {

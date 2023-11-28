@@ -4,6 +4,9 @@ collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
 textBoxDelay = 0;
 spdWalk = 3;
 animIndex = 0;
+vSpeed = 0;
+hSpeed = 0;
+z = 0;
 
 function FourDirectionAnimate() {
 	//Update Sprite
