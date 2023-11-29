@@ -25,6 +25,7 @@
     {"name":"sTiles","order":3,"path":"sprites/sTiles/sTiles.yy",},
     {"name":"sQuestyCast","order":9,"path":"sprites/sQuestyCast/sQuestyCast.yy",},
     {"name":"sCollision","order":6,"path":"sprites/sCollision/sCollision.yy",},
+    {"name":"rHouse","order":3,"path":"rooms/rHouse/rHouse.yy",},
     {"name":"oText","order":4,"path":"objects/oText/oText.yy",},
     {"name":"oBattleUnit","order":1,"path":"objects/oBattleUnit/oBattleUnit.yy",},
     {"name":"sBat","order":2,"path":"sprites/sBat/sBat.yy",},
@@ -65,6 +66,7 @@
     {"name":"oBarrier","order":9,"path":"objects/oBarrier/oBarrier.yy",},
     {"name":"rParent","order":1,"path":"rooms/rParent/rParent.yy",},
     {"name":"sPointer","order":2,"path":"sprites/sPointer/sPointer.yy",},
+    {"name":"oRoomExit","order":10,"path":"objects/oRoomExit/oRoomExit.yy",},
     {"name":"sShadow","order":11,"path":"sprites/sShadow/sShadow.yy",},
     {"name":"MACROS","order":7,"path":"scripts/MACROS/MACROS.yy",},
     {"name":"sBgField","order":1,"path":"sprites/sBgField/sBgField.yy",},
@@ -77,5 +79,6 @@
     {"name":"sDownArrow","order":1,"path":"sprites/sDownArrow/sDownArrow.yy",},
     {"name":"sSlime","order":4,"path":"sprites/sSlime/sSlime.yy",},
     {"name":"sNPCOne","order":9,"path":"sprites/sNPCOne/sNPCOne.yy",},
+    {"name":"sTrigger","order":12,"path":"sprites/sTrigger/sTrigger.yy",},
   ],
 }

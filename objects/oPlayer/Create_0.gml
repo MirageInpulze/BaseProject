@@ -8,6 +8,13 @@ vSpeed = 0;
 hSpeed = 0;
 z = 0;
 
+if (global.targetX != -1)
+{
+	x = global.targetX;
+	y = global.targetY;
+	direction = global.targetDirection;
+}
+
 function FourDirectionAnimate() {
 	//Update Sprite
 	var _animLength = sprite_get_number(sprite_index) / 4;

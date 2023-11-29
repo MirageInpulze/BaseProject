@@ -71,6 +71,7 @@ FourDirectionAnimate();
 	else global.isTextboxClosed = false;
 	}
 }
+
 function PlayerLocked(){
 	//Legit do nothing
 }
