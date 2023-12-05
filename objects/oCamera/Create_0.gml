@@ -7,3 +7,7 @@ viewHHalf = camera_get_view_height(cam) * 0.5;
 xTo = xstart;
 yTo = ystart;
 display_set_gui_size(320,180);
+
+shakeLegnth = 0;
+shakeMagnitude = 0;
+shakeRemain = 0;

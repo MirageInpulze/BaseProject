@@ -30,3 +30,18 @@ if (tilemap_get_at_pixel(collisionMap, x, y + vSpeed))
 y += vSpeed;
 return collision;
 }
+
+function ScreenShake(Magnitude, Frames){
+
+with (oCamera) 
+{
+	if (Magnitude > shakeRemain) 
+	{
+		shakeMagnitude = Magnitude; 
+		shakeRemain = shakeMagnitude; 
+		shakeLength = Frames; 
+	
+	}
+}
+
+}

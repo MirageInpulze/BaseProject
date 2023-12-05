@@ -16,7 +16,24 @@ hSpeed = lengthdir_x(spdWalk*_inputM,_inputD);
 vSpeed = lengthdir_y(spdWalk*_inputM,_inputD);
 
 PlayerCollision();
+sprite_index = spriteWalk;
 FourDirectionAnimate();
+
+	if (keyAttack)
+	{
+		state = PlayerAttack;
+		stateAttack = AttackSlash;
+	}
+
+
+
+	if (keyRoll)
+	{
+		state = PlayerRoll;
+		moveDistanceRemaining = distanceRoll;
+		
+		
+	}
 	
 	if (keyActivate)
 	{
@@ -74,4 +91,58 @@ FourDirectionAnimate();
 
 function PlayerLocked(){
 	//Legit do nothing
+}
+
+function PlayerRoll()
+{
+	hSpeed = lengthdir_x(spdRoll, direction);
+	vSpeed = lengthdir_y(spdRoll, direction);
+	
+	moveDistanceRemaining = max(0, moveDistanceRemaining - spdRoll);
+	var _collided = PlayerCollision();
+	
+	//Update Sprite
+	sprite_index = spriteRoll;
+	var _totalFrames = sprite_get_number(sprite_index)/4;
+	image_index = (CARDINAL_DIR * _totalFrames) + min((( 1 - (moveDistanceRemaining/distanceRoll)) * _totalFrames), _totalFrames -1);
+	
+	
+	if (moveDistanceRemaining <= 0)
+	{
+		state = PlayerWalking;
+	}
+	
+	if(_collided)
+	{
+		state = PlayerCollided;
+		moveDistanceRemaining = distanceCollided;
+		ScreenShake(8, 30)
+	}
+}
+
+function PlayerCollided()
+{
+	hSpeed = lengthdir_x(spdCollided, direction-180);
+	vSpeed = lengthdir_y(spdCollided, direction-180);
+	
+	moveDistanceRemaining = max(0, moveDistanceRemaining - spdRoll);
+	var _collided = PlayerCollision();
+	
+	//Update Sprite
+	sprite_index = sPlayerCollided;
+	image_index = CARDINAL_DIR
+	
+	//Change Height
+	z = 2*sin(((moveDistanceRemaining / distanceCollided) * pi) * distanceCollidedHeight);
+	
+	
+	if (moveDistanceRemaining <= 0)
+	{
+		state = PlayerWalking;
+	}
+}
+
+function PlayerAttack()
+{
+	script_execute(stateAttack)
 }

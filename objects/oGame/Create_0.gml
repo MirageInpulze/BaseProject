@@ -11,7 +11,7 @@ global.targetY = -1;
 global.targetDirection = 0;
 
 surface_resize(application_surface, RESOLUTION_W, RESOLUTION_H);
-room_goto(rVillage);
+room_goto(ROOM_START);
 
 
 

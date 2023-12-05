@@ -1,8 +1,18 @@
 state = PlayerWalking;
+stateAttack = AttackSlash;
 lastState = state
 collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
 textBoxDelay = 0;
-spdWalk = 3;
+spdWalk = 2;
+spdRoll = 3;
+spdCollided = 1.5;
+distanceRoll = 72;
+distanceCollided = 40;
+distanceCollidedHeight = 12;
+
+
+spriteWalk = sPlayerWalk
+spriteRoll = sPlayerRoll
 animIndex = 0;
 vSpeed = 0;
 hSpeed = 0;
