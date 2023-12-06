@@ -1,6 +1,10 @@
 state = PlayerWalking;
 stateAttack = AttackSlash;
-lastState = state
+hitByAttack = -1;
+lastState = state;
+
+
+
 collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
 textBoxDelay = 0;
 spdWalk = 2;

@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PlayerCollision(){
+function PlayerCollision()
+{
 var collision = false;
 var _inputH = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _inputV = keyboard_check(vk_down) - keyboard_check(vk_up);
@@ -31,17 +32,34 @@ y += vSpeed;
 return collision;
 }
 
-function ScreenShake(Magnitude, Frames){
-
-with (oCamera) 
+function ScreenShake(Magnitude, Frames)
 {
-	if (Magnitude > shakeRemain) 
+
+	with (oCamera) 
 	{
-		shakeMagnitude = Magnitude; 
-		shakeRemain = shakeMagnitude; 
-		shakeLength = Frames; 
+		if (Magnitude > shakeRemain) 
+		{
+			shakeMagnitude = Magnitude; 
+			shakeRemain = shakeMagnitude; 
+			shakeLength = Frames; 
 	
+		}
 	}
-}
 
 }
+
+function EntityHitDestroy()
+{
+	instance_destroy();
+	
+	
+	
+}
+
+function EntityHitFlash()
+{
+	flash = .5;
+}	
+	
+	
+	

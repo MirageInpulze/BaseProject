@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PlayerWalking(){
+function PlayerWalking()
+{
 	if (_inputM != 0)
 	{
 		direction = _inputD;	
@@ -15,7 +16,7 @@ function PlayerWalking(){
 hSpeed = lengthdir_x(spdWalk*_inputM,_inputD);
 vSpeed = lengthdir_y(spdWalk*_inputM,_inputD);
 
-PlayerCollision();
+Collisions();
 sprite_index = spriteWalk;
 FourDirectionAnimate();
 
@@ -89,7 +90,8 @@ FourDirectionAnimate();
 	}
 }
 
-function PlayerLocked(){
+function PlayerLocked()
+{
 	//Legit do nothing
 }
 
@@ -99,7 +101,7 @@ function PlayerRoll()
 	vSpeed = lengthdir_y(spdRoll, direction);
 	
 	moveDistanceRemaining = max(0, moveDistanceRemaining - spdRoll);
-	var _collided = PlayerCollision();
+	var _collided = Collisions();
 	
 	//Update Sprite
 	sprite_index = spriteRoll;
@@ -126,7 +128,7 @@ function PlayerCollided()
 	vSpeed = lengthdir_y(spdCollided, direction-180);
 	
 	moveDistanceRemaining = max(0, moveDistanceRemaining - spdRoll);
-	var _collided = PlayerCollision();
+	var _collided = Collisions();
 	
 	//Update Sprite
 	sprite_index = sPlayerCollided;
