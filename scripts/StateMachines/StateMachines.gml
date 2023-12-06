@@ -124,7 +124,7 @@ function PlayerCollided()
 	vSpeed = lengthdir_y(spdCollided, direction-180);
 	
 	moveDistanceRemaining = max(0, moveDistanceRemaining - spdRoll);
-	var _collided = Collisions();
+	var _collided = PlayerCollision();
 	
 	//Update Sprite
 	sprite_index = sPlayerCollided;
