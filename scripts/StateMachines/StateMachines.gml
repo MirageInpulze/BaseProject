@@ -1,7 +1,7 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PlayerWalking()
-{
+//// Script assets have changed for v2.3.0 see
+//// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+function PlayerWalking(){
 	if (_inputM != 0)
 	{
 		direction = _inputD;	
@@ -16,7 +16,7 @@ function PlayerWalking()
 hSpeed = lengthdir_x(spdWalk*_inputM,_inputD);
 vSpeed = lengthdir_y(spdWalk*_inputM,_inputD);
 
-Collisions();
+PlayerCollision();
 sprite_index = spriteWalk;
 FourDirectionAnimate();
 
@@ -27,13 +27,10 @@ FourDirectionAnimate();
 	}
 
 
-
 	if (keyRoll)
 	{
 		state = PlayerRoll;
 		moveDistanceRemaining = distanceRoll;
-		
-		
 	}
 	
 	if (keyActivate)
@@ -89,11 +86,10 @@ FourDirectionAnimate();
 	else global.isTextboxClosed = false;
 	}
 }
-
-function PlayerLocked()
-{
+function PlayerLocked(){
 	//Legit do nothing
 }
+
 
 function PlayerRoll()
 {
@@ -101,7 +97,7 @@ function PlayerRoll()
 	vSpeed = lengthdir_y(spdRoll, direction);
 	
 	moveDistanceRemaining = max(0, moveDistanceRemaining - spdRoll);
-	var _collided = Collisions();
+	var _collided = PlayerCollision();
 	
 	//Update Sprite
 	sprite_index = spriteRoll;
