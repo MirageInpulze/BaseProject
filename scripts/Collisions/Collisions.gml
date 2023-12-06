@@ -56,7 +56,7 @@ function EntityHitDestroy()
 	
 }
 
-function EntityHitFlash()
+function EntityHitSolid()
 {
 	flash = .5;
 }	

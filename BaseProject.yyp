@@ -107,6 +107,7 @@
     {"id":{"name":"sQuestyDown","path":"sprites/sQuestyDown/sQuestyDown.yy",},},
     {"id":{"name":"sAttackHeal","path":"sprites/sAttackHeal/sAttackHeal.yy",},},
     {"id":{"name":"fnM3x6","path":"fonts/fnM3x6/fnM3x6.yy",},},
+    {"id":{"name":"shWhiteFlash","path":"shaders/shWhiteFlash/shWhiteFlash.yy",},},
     {"id":{"name":"sAttackBonk","path":"sprites/sAttackBonk/sAttackBonk.yy",},},
     {"id":{"name":"sPlant","path":"sprites/sPlant/sPlant.yy",},},
     {"id":{"name":"oSignpost","path":"objects/oSignpost/oSignpost.yy",},},

@@ -4,7 +4,9 @@
   "name": "oSignpost",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"propertyId":{"name":"entityHitScript","path":"objects/pEntity/pEntity.yy",},"value":"EntityHitSolid",},
+  ],
   "parent": {
     "name": "Field",
     "path": "folders/Objects/Field.yy",
