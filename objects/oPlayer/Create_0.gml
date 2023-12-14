@@ -1,5 +1,5 @@
 state = PlayerWalking;
-stateAttack = AttackSlash;
+//stateAttack = AttackSlash;
 hitByAttack = -1;
 lastState = state;
 
@@ -15,8 +15,8 @@ distanceCollided = 40;
 distanceCollidedHeight = 12;
 
 
-spriteWalk = sPlayerWalk
-spriteRoll = sPlayerRoll
+spriteWalk = sPlayerRun
+//spriteRoll = sPlayerRoll
 animIndex = 0;
 vSpeed = 0;
 hSpeed = 0;
