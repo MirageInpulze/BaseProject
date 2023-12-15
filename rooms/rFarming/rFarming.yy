@@ -11,6 +11,10 @@
     {"name":"inst_76B9FC3","path":"rooms/rFarming/rFarming.yy",},
     {"name":"inst_44CEE0D8","path":"rooms/rFarming/rFarming.yy",},
     {"name":"inst_31846C48","path":"rooms/rFarming/rFarming.yy",},
+    {"name":"inst_E37BBF5","path":"rooms/rFarming/rFarming.yy",},
+    {"name":"inst_276BA172","path":"rooms/rFarming/rFarming.yy",},
+    {"name":"inst_295C201F","path":"rooms/rFarming/rFarming.yy",},
+    {"name":"inst_5B7B4039","path":"rooms/rFarming/rFarming.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -27,6 +31,10 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"propertyId":{"name":"targetY","path":"objects/oRoomExit/oRoomExit.yy",},"value":"126",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"propertyId":{"name":"targetRoom","path":"objects/oRoomExit/oRoomExit.yy",},"value":"rShop",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":113.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E37BBF5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_crops_manager","path":"objects/obj_crops_manager/obj_crops_manager.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_276BA172","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_day_cycle","path":"objects/obj_day_cycle/obj_day_cycle.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_295C201F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_depth_sorter","path":"objects/obj_depth_sorter/obj_depth_sorter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5B7B4039","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":32.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"lCollision","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":70,"SerialiseWidth":80,"TileCompressedData":[
 -22,0,-4,1,-13,0,-5,1,-20,-2147483648,-6,1,1,0,-9,-2147483648,-18,0,-12,1,-9,0,1,1,-3,-2147483648,-2,1,-19,-2147483648,-6,1,-10,-2147483648,-18,0,-12,1,-8,0,-2,1,-4,-2147483648,1,1,-12,-2147483648,-13,1,-10,-2147483648,-18,0,-12,1,-7,0,-2,1,1,0,-4,-2147483648,-3,1,-9,-2147483648,-2,1,-5,-2147483648,-14,1,-3,-2147483648,-14,0,-17,1,
