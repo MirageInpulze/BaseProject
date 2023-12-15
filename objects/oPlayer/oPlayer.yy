@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sLuluRun",
-    "path": "sprites/sLuluRun/sLuluRun.yy",
+    "name": "sPlayerWalk",
+    "path": "sprites/sPlayerWalk/sPlayerWalk.yy",
   },
   "spriteMaskId": null,
   "visible": true,
