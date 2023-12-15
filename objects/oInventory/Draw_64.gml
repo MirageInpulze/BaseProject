@@ -8,7 +8,7 @@ if(global.chestOpened && !global.char_leave){
 //global.char_leave = false
 
 if(!show_inv){
-	draw_sprite_ext(sInventory,1, inv_gui_x, gui_height*0.4-16, inv_gui_scale, inv_gui_scale, 0, c_white, 1)
+	draw_sprite_ext(sInventory,1, inv_gui_x, gui_height*0.8-16, inv_gui_scale, inv_gui_scale, 0, c_white, 1)
 	var ii = 0, xx, yy
 	
 	var loop = array_length(global.playerInventory._inventory_items)
@@ -18,7 +18,7 @@ if(!show_inv){
 	}
 	repeat(loop){
 		xx = (inv_gui_x + 8) + ((ii)*16) + 5 * ii
-		yy = (gui_height*0.4 + 8 + 8)
+		yy = (gui_height*0.8 + 8 + 8)
 	
 		if(global.itemChosen == global.playerInventory._inventory_items[ii]){
 			draw_sprite_ext(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy, 1.1, 1.1, 0, c_aqua, 1)

@@ -11,7 +11,7 @@
 
 //if(keyboard_check_released(vk_right)||keyboard_check_released(vk_left)||keyboard_check_released(vk_up)||keyboard_check_released(vk_down)){
 
-if(keyboard_check_pressed(ord("F"))){
+if(keyboard_check_pressed(ord("F")) || keyboard_check_pressed(ord("O"))){
 	show_debug_message("cpf")
 	global.player_chest1_collision = true
 	global.chestOpened = true

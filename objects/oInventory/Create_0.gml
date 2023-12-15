@@ -17,8 +17,8 @@ gui_height = display_get_gui_height()
 
 inv_gui_scale = 0.15
 
-inv_gui_x = (gui_width * 0.40) - (inv_width * inv_gui_scale * 0.5 * scale)
-inv_gui_y = (gui_height * 0.40) - (inv_height * inv_gui_scale * 0.5 * scale)
+inv_gui_x = (gui_width * 0.50) - (inv_width * inv_gui_scale * 0.25 * scale)
+inv_gui_y = (gui_height * 0.50) - (inv_height * inv_gui_scale * 0.25 * scale)
 
 
 slots_x = inv_gui_x + (53 * inv_gui_scale * scale)
