@@ -11,7 +11,7 @@ draw_set_alpha(1)
 
 //debug text
 _c = c_yellow
-draw_set_font(fnt_debug)
+draw_set_font(fnt_text)
 draw_text_color(10, 10, "Sec: " + string(seconds), _c,_c,_c,_c, 1)
 draw_text_color(10, 20, "Min: " + string(minutes), _c,_c,_c,_c, 1)
 draw_text_color(10, 30, "Hour: "+ string(hours), _c,_c,_c,_c, 1)
