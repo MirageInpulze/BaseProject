@@ -1,0 +1,41 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_button_load_game",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_prototype","path":"objects/obj_button_prototype/obj_button_prototype.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_prototype/obj_button_prototype.yy",},"value":"Load game",},
+  ],
+  "parent": {
+    "name": "Menu Components_Long",
+    "path": "folders/Objects/Menu Components_Long.yy",
+  },
+  "parentObjectId": {
+    "name": "obj_button_prototype",
+    "path": "objects/obj_button_prototype/obj_button_prototype.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_button_0",
+    "path": "sprites/spr_button_0/spr_button_0.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}
