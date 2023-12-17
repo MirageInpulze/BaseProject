@@ -10,6 +10,7 @@
     {"name":"inst_3038E2A_1_1","path":"rooms/rShop/rShop.yy",},
     {"name":"inst_3BAD4DF8_1","path":"rooms/rShop/rShop.yy",},
     {"name":"inst_31A4E69E","path":"rooms/rShop/rShop.yy",},
+    {"name":"inst_247DA444","path":"rooms/rShop/rShop.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -24,6 +25,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"propertyId":{"name":"targetX","path":"objects/oRoomExit/oRoomExit.yy",},"value":"1072",},
           ],"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":176.0,"y":128.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_31A4E69E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oNPCOne","path":"objects/oNPCOne/oNPCOne.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":183.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_247DA444","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_money","path":"objects/obj_money/obj_money.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"lCollision","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
 -86,0,-10,1,-30,0,1,1,-8,0,1,1,-30,0,1,1,-8,0,1,1,-30,0,1,1,-8,0,1,1,-30,0,1,1,-8,0,1,1,-30,0,1,1,
