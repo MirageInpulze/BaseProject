@@ -4,9 +4,17 @@ seconds = 6 * 60 * 60;
 minutes = 0;
 hours = 0;
 weather = 0; //TODO: 
+//Start at Summer
+day = 1
+month = 4
+enum SEASON {
+	SPRING,
+	SUMMER,
+	FALL,
+	WINTER
+}
 
-day = 1;
-season = 1;
+season = SEASON.SUMMER;
 year = 1;
 time_increment = 500 // number of sec increase each step(aka frame), set to 1/60 for real life time 
 darkness = 0; // the opacity for a overlay to craete darkness
@@ -18,6 +26,7 @@ gui_height = display_get_gui_height()
 time_pause = true
 
 max_darkness = 0.7
+
 enum PHASE {
 	SUNRISE = 6,
 	DAYTIME = 8.5,

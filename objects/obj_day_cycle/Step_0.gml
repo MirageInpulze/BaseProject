@@ -9,7 +9,7 @@ hours = minutes/60
 //darkness= hours/24
 
 //Cycle
-if (hours >=24) {
+if (hours >= 24) {
 	seconds = 0
 	day += 1
 	is_grow_called_at_0 = false
@@ -17,12 +17,22 @@ if (hours >=24) {
 
 	if(day > 30) {
 		day = 1
-		season +=1
+		month +=1
 		
-		if(season > 4) {
-			season = 1
-			year +=1
+		if (month <= 3) {
+			season = SEASON.SPRING
+		} else if (month <= 6) {
+			season = SEASON.SUMMER
+		} else if (month <= 9) {
+			season = SEASON.FALL
+		} else if (month <= 12) {
+			season = SEASON.WINTER
+		} else { //end of year
+			month = 1
+			season = SEASON.SPRING
+			year += 1
 		}
+		
 	}
 	
 }
