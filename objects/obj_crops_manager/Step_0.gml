@@ -3,7 +3,7 @@
 // Call the instance_create_crop() to plant the crop in a specific location
 //TODO: if(room != rm_farm) {is_planting = false: exit};
 
-if (keyboard_check_pressed(ord("P"))) {is_planting = !is_planting}
+if (room == rFarming and keyboard_check_pressed(ord("P"))) {is_planting = !is_planting}
 
 if(is_planting) {
 	mx = mouse_x
@@ -21,7 +21,7 @@ if(is_planting) {
 }
 
 //Testing grow_state  
-if (instance_exists(obj_crop) and keyboard_check_pressed(ord("G"))) {
+if (keyboard_check_pressed(ord("G"))) {
 	with(obj_crops_manager) {event_perform(ev_other, ev_user1)}
 	
 }

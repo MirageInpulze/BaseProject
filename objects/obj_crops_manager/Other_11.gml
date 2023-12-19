@@ -1,9 +1,10 @@
-/// @description call this function to make the crop grow by a day
-// You can write your code in this editor
+/// @description call this function to make the crop grow by 12h, 
+/// This function is called when the each 12h of the day 
+
 var _types = obj_crops_manager.ds_crops_types
 var _max_growth_stage = obj_crops_manager.max_growth_stage
 
-if (instance_exists(obj_crop)) {
+if (room == rFarming and instance_exists(obj_crop)) {
 	with(obj_crop) {
 		var _state_1_exp = _types[# 0, crop_type]
 		var _state_2_exp = _types[# 1, crop_type]
@@ -19,7 +20,7 @@ if (instance_exists(obj_crop)) {
 				}
 			}
 			
-			//change is_watered to fasle if it it at midnight
+			//change is_watered to false if it it at midnight
 			//TODO: uncoment the below 
 			//if (floor(obj_day_cycle.hours) == 0) is_watered = false
 			
@@ -47,7 +48,7 @@ if (instance_exists(obj_crop)) {
 			fully_grown = true
 		}
 	}
-} else if (ds_crops_data[# 0, 0] != -1) { //make crop grow if player is outside the farm_room 
+} else if (room != rFarming and ds_crops_data[# 0, 0] != -1) { //make crop grow if player is outside the farm_room 
 	var _h = ds_grid_height(ds_crops_data)
 	var _i = 0; repeat(_h) {
 		var _crop_type = ds_crops_data[# 2 ,_i]
@@ -63,7 +64,9 @@ if (instance_exists(obj_crop)) {
 					ds_crops_data[# 3,_i] +=50 
 			}
 		}
-		if (floor(obj_day_cycle.hours) == 0) ds_crops_data[# 4,_i] = false
+		//change is_watered to false if it it at midnight
+		//TODO: uncoment the below 
+		//if (floor(obj_day_cycle.hours) == 0) ds_crops_data[# 4,_i] = false
 		_i += 1
 	} 
 
