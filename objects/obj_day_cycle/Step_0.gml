@@ -18,7 +18,8 @@ if (hours >= 24) {
 	if(day > 30) {
 		day = 1
 		month +=1
-		
+		//if season change, make all crop dead (exp == -1)
+		var _prev_season = season
 		if (month <= 3) {
 			season = SEASON.SPRING
 		} else if (month <= 6) {
@@ -31,6 +32,10 @@ if (hours >= 24) {
 			month = 1
 			season = SEASON.SPRING
 			year += 1
+		}
+		
+		if __prev_season != season {
+			make_crops_dead()
 		}
 		
 	}

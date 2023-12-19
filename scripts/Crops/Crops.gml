@@ -189,3 +189,22 @@ function create_sprite_crop_type(_sprite_id, _sprite_offset, _type_offset_, _max
 		_i +=1
 	}
 }
+
+function make_crops_dead(){
+	//this should be called when season change
+	var _types = obj_crops_manager.ds_crops_types
+	var _max_growth_stage = obj_crops_manager.max_growth_stage
+
+	if (room == rFarming and instance_exists(obj_crop)) {
+		with(obj_crop) {
+			exp_point = -1
+		}
+	} else if (room != rFarming and ds_crops_data[# 0, 0] != -1) { //make crop grow if player is outside the farm_room 
+		var _h = ds_grid_height(ds_crops_data)
+		var _i = 0; repeat(_h) {
+			ds_crops_data[# 3,_i] = -1
+			_i += 1
+		} 
+	}
+
+}

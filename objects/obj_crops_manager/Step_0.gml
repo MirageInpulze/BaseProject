@@ -25,7 +25,12 @@ if (keyboard_check_pressed(ord("G"))) {
 	with(obj_crops_manager) {event_perform(ev_other, ev_user1)}
 	
 }
-
-
+//make crop dead
+/*
+if (keyboard_check_pressed(ord("D"))) {
+	make_crops_dead()
+	
+}
+*/
 
 
