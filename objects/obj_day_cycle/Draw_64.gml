@@ -2,13 +2,14 @@
 // You can write your code in this editor
 
 //Lightting base on daytime
-var _c = light_color
-draw_set_alpha(darkness)
+if (room == rFarming) {
+	var _c = light_color
+	draw_set_alpha(darkness)
 
-draw_rectangle_color(0,0,gui_witdh,gui_height, _c, _c,_c,_c, false)
+	draw_rectangle_color(0,0,gui_witdh,gui_height, _c, _c,_c,_c, false)
 
-draw_set_alpha(1)
-
+	draw_set_alpha(1)
+}
 //debug text
 _c = c_yellow
 draw_set_font(fnt_text)

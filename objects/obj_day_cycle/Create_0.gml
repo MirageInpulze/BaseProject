@@ -8,7 +8,7 @@ weather = 0; //TODO:
 day = 1;
 season = 1;
 year = 1;
-time_increment = 200 // number of sec increase each step(aka frame), set to 1/60 for real life time 
+time_increment = 1 // number of sec increase each step(aka frame), set to 1/60 for real life time 
 darkness = 0; // the opacity for a overlay to craete darkness
 light_color = c_black
 

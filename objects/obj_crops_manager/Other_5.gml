@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//if (room == rm_farm) {
-if(false) {
+is_planting = false
+if (room == rFarming) {
 	var _inst_num = instance_number(obj_crop)
 	if (_inst_num == 0) { ds_grid_clear(ds_crops_data, -1)}
 	else {
@@ -30,7 +30,8 @@ if(false) {
 			_xx += 1
 		}
 	}
-//}
+	ds_grid_destroy(ds_crops_instances)
 }
-ds_grid_destroy(ds_crops_instances)
+
+
 

@@ -4,16 +4,6 @@ var _types = obj_crops_manager.ds_crops_types
 var _max_growth_stage = obj_crops_manager.max_growth_stage
 
 if (instance_exists(obj_crop)) {
-//	with(obj_fantasy_crop) {
-//		if growth_stage < max_growth_stage {
-//			days_old += 1
-//			growth_stage = days_old div growth_stage_duration
-//		} else {
-//			growth_stage = max_growth_stage
-//			fully_grown = true
-//		}
-//	}
-
 	with(obj_crop) {
 		var _state_1_exp = _types[# 0, crop_type]
 		var _state_2_exp = _types[# 1, crop_type]
