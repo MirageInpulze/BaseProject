@@ -1,8 +1,8 @@
 /// @description save the data of the crops on the current farm foom
-//if (room = rm_farm) {
+if (room = rFarming) {
 	ds_crops_instances = ds_grid_create(room_width div cell_size, room_height div cell_size)
 	ds_grid_clear(ds_crops_instances, 0)
-	if(false) {
+
 	if ds_crops_data[# 0, 0] != -1 {
 		var _inst_num = ds_grid_height(ds_crops_data)
 		var _slot = 0; repeat(_inst_num) {
@@ -17,6 +17,7 @@
 		}
 	}
 	//because respawn_crop only add data, so the current state of crop need to be set explicitly
+	/*
 	var _types = ds_crops_types
 	var _max_growth_stage = max_growth_stage
 	with(obj_crop) {
@@ -38,12 +39,12 @@
 			} else if (_exp < _state_5_exp) { // exp < stage 5
 				growth_stage = 4
 			} else { //stage 5 aka harvestable
-				//growth_stage = 5
 				growth_stage = _max_growth_stage
 				fully_grown = true
 			}
-		}
+		
 	}
-//}
+	*/
+}
 
  

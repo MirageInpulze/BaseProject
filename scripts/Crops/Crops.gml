@@ -87,14 +87,41 @@ function instance_create_crop(_xx, _yy, _crop_type) {
 function respawn_crop(_grid_x, _grid_y, _crop_type, _exp_point, _is_watered) {
 	var _inst = instance_create_layer(_grid_x * cell_size, _grid_y * cell_size, "Instances",  get_crop_obj_id_by_crop_type(_crop_type))
 	ds_crops_instances[# _grid_x, _grid_y]  = _inst
-	
+	var _types = ds_crops_types
+	var _max_growth_stage = max_growth_stage
+
 	with (_inst) {
+		//update properties
 		crop_type = _crop_type
 		exp_point = _exp_point
 		is_watered = _is_watered
-		show_debug_message("Respawned a " + ds_crops_types[# 5, crop_type])
+		
+		//update sprite
+		
+		var _state_1_exp = _types[# 0, crop_type]
+		var _state_2_exp = _types[# 1, crop_type]
+		var _state_3_exp = _types[# 2, crop_type]
+		var _state_4_exp = _types[# 3, crop_type]
+		var _state_5_exp = _types[# 4, crop_type] //aka max_exp
+		
+		sprite_num = get_crop_spr_num(exp_point, _state_5_exp, max_sprite_num)
+			if (exp_point <_state_1_exp ) {//when exit and reenter farm room in the same first day 
+				growth_stage = 0
+			} else if (exp_point < _state_2_exp) { // exp < stage 2
+				growth_stage = 1
+			} else if (exp_point < _state_3_exp) { // exp < stage 3
+				growth_stage = 2
+			} else if (exp_point < _state_4_exp) { // exp < stage 4
+				growth_stage = 3
+			} else if (exp_point < _state_5_exp) { // exp < stage 5
+				growth_stage = 4
+			} else { //stage 5 aka harvestable
+				growth_stage = _max_growth_stage
+				fully_grown = true
+			}
+		
+		show_debug_message("Respawned a " + obj_crops_manager.ds_crops_types[# 5, crop_type])
 	}
-	
 	return _inst
 }
 
@@ -161,4 +188,23 @@ function create_sprite_crop_type(_sprite_id, _sprite_offset, _type_offset_, _max
 		ds_crop_sprites[# _i, _yy] = argument[_i]
 		_i +=1
 	}
+}
+
+function make_crops_dead(){
+	//this should be called when season change
+	var _types = obj_crops_manager.ds_crops_types
+	var _max_growth_stage = obj_crops_manager.max_growth_stage
+
+	if (room == rFarming and instance_exists(obj_crop)) {
+		with(obj_crop) {
+			exp_point = -1
+		}
+	} else if (room != rFarming and ds_crops_data[# 0, 0] != -1) { //make crop grow if player is outside the farm_room 
+		var _h = ds_grid_height(ds_crops_data)
+		var _i = 0; repeat(_h) {
+			ds_crops_data[# 3,_i] = -1
+			_i += 1
+		} 
+	}
+
 }

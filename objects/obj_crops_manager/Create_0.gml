@@ -5,10 +5,8 @@
 // depend on the fertilizer, add more exp
 
 //How to store exp point for each crop 
-// There are 3 way to do exp point
-// 1. save (and update )all the var that affect exp and calculate the exp base on those var when need (choosen)
-// 2. save a exp_point var, this var will be updated base on event (day pass, fetilizer)
-// 3. both
+// save a exp_point var, this var will be updated base on event (day pass, fetilizer)
+//If exp_point == -1, it mean the crop is dead
 ds_crops_types = -1
 //this is the table that hold information for each type of crop
 //Every crop have 5 stage, the different is how many exp to get to each stage
@@ -57,10 +55,10 @@ enum CROP_SPRITE_INFO {
 	TINY_WONDER_FARM
 }
 ds_crop_sprites = -1
-create_sprite_crop_type(spr_fantasy_crops, 0, 0, 6)
-create_sprite_crop_type(spr_wheat_eggplant_crop, 1, 8, 4)
+create_sprite_crop_type(spr_fantasy_crops, 0, 0, 4)
+create_sprite_crop_type(spr_wheat_eggplant_crop, 1, 8, 3)
 create_sprite_crop_type(spr_simple_crops, 0, 10, 4)
-create_sprite_crop_type(spr_fantasy_crops, 7, 22, 6)
+create_sprite_crop_type(spr_fantasy_crops, 7, 22, 4)
 create_sprite_crop_type(spr_tiny_wonder_farm, 0, 30, 4)
 
 

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Draw the grid to debug
-if false {
+
 var _xx = 0
 var _cs = obj_crops_manager.cell_size
 
@@ -24,4 +24,3 @@ repeat(_r) {
 
 draw_set_alpha(1)
 
-}

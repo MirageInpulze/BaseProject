@@ -19,6 +19,7 @@ var _c = c_green
 //var _map_id = layer_tilemap_get_id(_lay_id)
 //var _data = tilemap_get_at_pixel(_map_id, _xx, _yy)
 //if _data != 0 _c = c_white
+//NOTICE: Error w
 if ds_crops_instances[# _gx, _gy] != 0 {
 	_c = c_red
 }  
