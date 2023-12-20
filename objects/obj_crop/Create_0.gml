@@ -10,9 +10,9 @@ is_watered = true //TODO:Should be false, true for testing grow
 growth_stage = 0
 exp_point = 0
 //bonus = 0 //bonus point when get fertilized
-
+//helper properties, make the process of interact with crop ong the map easier
 fully_grown = false //aka growth stage = 5.
-
+is_dead = false
 //growth_stage_duration = 0
 sprite_num = 0
 max_sprite_num = -1 //0-6 sprite

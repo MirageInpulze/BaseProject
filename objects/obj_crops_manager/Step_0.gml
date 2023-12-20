@@ -26,11 +26,11 @@ if (keyboard_check_pressed(ord("G"))) {
 	
 }
 //make crop dead
-/*
+
 if (keyboard_check_pressed(ord("D"))) {
 	make_crops_dead()
 	
 }
-*/
+
 
 
