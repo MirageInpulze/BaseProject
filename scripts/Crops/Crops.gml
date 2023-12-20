@@ -96,15 +96,15 @@ function respawn_crop(_grid_x, _grid_y, _crop_type, _exp_point, _is_watered) {
 		exp_point = _exp_point
 		is_watered = _is_watered
 		
+		if (exp_point == -1) {
 		//update sprite
+			var _state_1_exp = _types[# 0, crop_type]
+			var _state_2_exp = _types[# 1, crop_type]
+			var _state_3_exp = _types[# 2, crop_type]
+			var _state_4_exp = _types[# 3, crop_type]
+			var _state_5_exp = _types[# 4, crop_type] //aka max_exp
 		
-		var _state_1_exp = _types[# 0, crop_type]
-		var _state_2_exp = _types[# 1, crop_type]
-		var _state_3_exp = _types[# 2, crop_type]
-		var _state_4_exp = _types[# 3, crop_type]
-		var _state_5_exp = _types[# 4, crop_type] //aka max_exp
-		
-		sprite_num = get_crop_spr_num(exp_point, _state_5_exp, max_sprite_num)
+			sprite_num = get_crop_spr_num(exp_point, _state_5_exp, max_sprite_num)
 			if (exp_point <_state_1_exp ) {//when exit and reenter farm room in the same first day 
 				growth_stage = 0
 			} else if (exp_point < _state_2_exp) { // exp < stage 2
@@ -119,6 +119,10 @@ function respawn_crop(_grid_x, _grid_y, _crop_type, _exp_point, _is_watered) {
 				growth_stage = _max_growth_stage
 				fully_grown = true
 			}
+		} else {
+			fully_grown = false
+			is_dead = true
+		}
 		
 		show_debug_message("Respawned a " + obj_crops_manager.ds_crops_types[# 5, crop_type])
 	}
@@ -198,6 +202,8 @@ function make_crops_dead(){
 	if (room == rFarming and instance_exists(obj_crop)) {
 		with(obj_crop) {
 			exp_point = -1
+			fully_grown = false
+			is_dead = true
 		}
 	} else if (room != rFarming and ds_crops_data[# 0, 0] != -1) { //make crop grow if player is outside the farm_room 
 		var _h = ds_grid_height(ds_crops_data)
