@@ -1,13 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+/// @description Insert description here
+// You can write your code in this editor
 if (keyboard_check_pressed(ord("F"))){time_pause = !time_pause}
 if (time_pause) {exit}
 //Increase Time
 seconds += time_increment
 minutes = seconds/60
 hours = minutes/60
-//darkness= hours/24
-
+display_min = (minutes - floor(hours) * 60)
 //Cycle
 if (hours >= 24) {
 	seconds = 0
@@ -34,7 +37,7 @@ if (hours >= 24) {
 			year += 1
 		}
 		
-		if __prev_season != season {
+		if _prev_season != season {
 			make_crops_dead()
 		}
 		

@@ -36,6 +36,6 @@ global.chestOpened = false
 
 global.chestInventory1 = new Inventory() 
 
-global.chestInventory1.item_add("Wheat Seed", 64, sWheat)
-global.chestInventory1.item_add("Carot Seed", 64, sCarot)
-global.chestInventory1.item_add("Eggplant Seed", 64, sEggplant)
+//global.chestInventory1.item_add("Wheat Seed", 64, sWheat)
+//global.chestInventory1.item_add("Carot Seed", 64, sCarot)
+//global.chestInventory1.item_add("Eggplant Seed", 64, sEggplant)

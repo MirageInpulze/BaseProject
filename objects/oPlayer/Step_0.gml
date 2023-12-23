@@ -1,3 +1,4 @@
+if (!global.is_open_shopping_panel){
 _inputH = keyboard_check(vk_right) - keyboard_check(vk_left);
 _inputV = keyboard_check(vk_down) - keyboard_check(vk_up);
 _inputD = point_direction(0,0,_inputH,_inputV);
@@ -33,4 +34,5 @@ if(keyboard_check_pressed(ord("J")) && global.itemChosen.name == "Watering Can")
 	if(i == 102){
 		tilemap_set_at_pixel(map_id, 1, oPlayer.x, oPlayer.y);
 	}
+}
 }

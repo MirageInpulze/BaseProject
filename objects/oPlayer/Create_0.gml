@@ -3,7 +3,9 @@ stateAttack = AttackSlash;
 hitByAttack = -1;
 lastState = state;
 
-
+// curent money and shopping state
+//global.currentMoney = 20000;
+global.is_open_shopping_panel = false;
 
 collisionMap = layer_tilemap_get_id(layer_get_id("lCollision"));
 textBoxDelay = 0;

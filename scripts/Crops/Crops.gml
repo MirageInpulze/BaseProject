@@ -96,7 +96,7 @@ function respawn_crop(_grid_x, _grid_y, _crop_type, _exp_point, _is_watered) {
 		exp_point = _exp_point
 		is_watered = _is_watered
 		
-		if (exp_point == -1) {
+		if (exp_point != -1) {
 		//update sprite
 			var _state_1_exp = _types[# 0, crop_type]
 			var _state_2_exp = _types[# 1, crop_type]
