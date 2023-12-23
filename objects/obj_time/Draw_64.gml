@@ -15,13 +15,13 @@ draw_set_valign(fa_top)
 draw_set_font(fnt_text)
 
 var season = "Spring"
-if(obj_day_cycle.season == 1){
+if(obj_day_cycle.season == SEASON.SPRING){
 	season = "Spring"
-}else if(obj_day_cycle.season == 2){
+}else if(obj_day_cycle.season == SEASON.SUMMER){
 	season = "Summer"
-}else if(obj_day_cycle.season == 3){
+}else if(obj_day_cycle.season == SEASON.FALL){
 	season = "Fall"
-}else if(obj_day_cycle.season == 4){
+}else if(obj_day_cycle.season == SEASON.WINTER){
 	season = "Winter"
 }
 
@@ -37,6 +37,3 @@ if(obj_day_cycle.hours < 10 && obj_day_cycle.display_min < 10){
 }else if(obj_day_cycle.hours >= 10 && obj_day_cycle.display_min >= 10){
 	draw_text_color(gui_width - 32, 13, string(floor(obj_day_cycle.hours)) + ":" + string(floor(obj_day_cycle.display_min)), col, col ,col ,col ,1)
 }
-
-show_debug_message(obj_day_cycle.minutes)
-
