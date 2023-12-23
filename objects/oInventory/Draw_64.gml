@@ -19,16 +19,23 @@ if(!show_inv){
 	repeat(loop){
 		xx = (inv_gui_x + 8) + ((ii)*16) + 5 * ii
 		yy = (gui_height*0.8 + 8 + 8)
+		
+		var scale_sprite = 1
+		if(sprite_get_width(global.playerInventory._inventory_items[ii].sprite) != 16){
+			scale_sprite = 16 / sprite_get_width(global.playerInventory._inventory_items[ii].sprite)
+		}
 	
 		if(global.itemChosen == global.playerInventory._inventory_items[ii]){
-			draw_sprite_ext(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy, 1.1, 1.1, 0, c_aqua, 1)
+			draw_sprite_ext(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy, 1.1*scale_sprite, 1.1*scale_sprite, 0, c_aqua, 1)
 		}
 		else{
-			draw_sprite(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy)
+			draw_sprite_ext(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy, scale_sprite, scale_sprite, 0, c_white, 1)
+			//draw_sprite(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy)
 		}
 	
 		var qty = global.playerInventory._inventory_items[ii].quantity
 		if(qty > 0){
+			draw_set_font(fnt_text)
 			draw_text_transformed(xx,yy,string(qty),0.5,0.5,0)
 		}
 		ii += 1
@@ -60,11 +67,17 @@ repeat(loop){
 	xx = (inv_gui_x + 8) + ((ix)*16) + 5 * ix
 	yy = (inv_gui_y + 8) + ((iy)*16) + 5 * iy
 	
+	var scale_sprite = 1
+	if(sprite_get_width(global.playerInventory._inventory_items[ii].sprite) != 16){
+		scale_sprite = 16 / sprite_get_width(global.playerInventory._inventory_items[ii].sprite)
+	}
 	
-	draw_sprite(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy)
+	draw_sprite_ext(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy, scale_sprite, scale_sprite, 0, c_white, 1)
+	//draw_sprite(global.playerInventory._inventory_items[ii].sprite, 0, xx, yy)
 	
 	var qty = global.playerInventory._inventory_items[ii].quantity
 	if(qty > 0){
+		draw_set_font(fnt_text)
 		//draw_text(xx, yy, string(qty))
 		//draw_text_color(xx, yy, string(qty), c_black, c_black,c_white,c_white,1)
 		draw_text_transformed(xx,yy,string(qty),0.5,0.5,0)

@@ -9,6 +9,7 @@
   "instanceCreationOrder": [
     {"name":"inst_3038E2A_1_1_1","path":"rooms/rPlayerHouse/rPlayerHouse.yy",},
     {"name":"inst_3BAD4DF8_1_1","path":"rooms/rPlayerHouse/rPlayerHouse.yy",},
+    {"name":"inst_1185B3FC","path":"rooms/rPlayerHouse/rPlayerHouse.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -19,6 +20,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"propertyId":{"name":"targetY","path":"objects/oRoomExit/oRoomExit.yy",},"value":"120",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"propertyId":{"name":"targetX","path":"objects/oRoomExit/oRoomExit.yy",},"value":"382",},
           ],"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":176.0,"y":128.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1185B3FC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_money","path":"objects/obj_money/obj_money.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"lCollision","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
 -81,0,-20,1,-20,0,1,1,-18,0,1,1,-20,0,1,1,-6,0,-2,1,-10,0,1,1,-20,0,1,1,-6,0,-2,1,-10,0,1,1,-20,0,1,1,

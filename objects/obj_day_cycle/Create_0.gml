@@ -1,7 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+/// @description Insert description here
+// You can write your code in this editor
 seconds = 6 * 60 * 60;
 minutes = 0;
+display_min = 0;
+display_hour= 0
 hours = 0;
 weather = 0; //TODO: 
 //Start at Summer

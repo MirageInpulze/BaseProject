@@ -29,7 +29,6 @@ if (keyboard_check_pressed(ord("G"))) {
 
 if (keyboard_check_pressed(ord("D"))) {
 	make_crops_dead()
-	
 }
 
 
