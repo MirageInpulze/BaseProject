@@ -16,7 +16,7 @@ if (room == rFarming) {
 			var _yy = 0; repeat (_gh) {
 				var _inst = ds_crops_instances[# _xx, _yy]
 				
-				if (_inst != 0) {
+				if (_inst != -1) {
 					ds_crops_data[# 0, _slot] = _xx 
 					ds_crops_data[# 1, _slot] = _yy 
 					ds_crops_data[# 2, _slot] = _inst.crop_type 

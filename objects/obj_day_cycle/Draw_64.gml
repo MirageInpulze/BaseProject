@@ -24,6 +24,6 @@ draw_text_color(10, 80, "Planting: P", _c,_c,_c,_c, 1)
 draw_text_color(10, 90, "+12h: G", _c,_c,_c,_c, 1)
 draw_text_color(10, 100, "Start Time: F", _c,_c,_c,_c, 1)
 draw_text_color(10, 110, "Crop Dead: D", _c,_c,_c,_c, 1)
-
-
+draw_text_color(10, 120, "Harvest: C", _c,_c,_c,_c, 1)
+draw_text_color(10, 130, "Test Harvest Many: E", _c,_c,_c,_c, 1)
 

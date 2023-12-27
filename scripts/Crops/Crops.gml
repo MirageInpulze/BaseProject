@@ -58,7 +58,7 @@ function instance_create_crop(_xx, _yy, _crop_type) {
 	var _gx = _xx
 	var _gy = _yy
 	var _cell = _i_grid[# _gx, _gy]
-	if (_cell == 0) {
+	if (_cell == -1) {
 		_xx = _xx * _cs
 		_yy = _yy * _cs
 	
@@ -212,5 +212,115 @@ function make_crops_dead(){
 			_i += 1
 		} 
 	}
+	
+}
 
+function water_crop(_x, _y){
+	if (room != rFarming) exit;
+	var _x_cell = _x div obj_crops_manager.cell_size
+	var _y_cell = _y div obj_crops_manager.cell_size
+	
+	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
+	if (instance_exists(_inst)) {
+		_inst.is_watered = true
+	}
+
+}
+
+function harvest_one(_x, _y){ 
+	
+	if (room != rFarming) exit;
+	
+	var _x_cell = _x div obj_crops_manager.cell_size
+	var _y_cell = _y div obj_crops_manager.cell_size
+	
+	//TODO: Change sprite base on Crop type 
+	var _spr_id = sCarot
+	
+	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
+	if (instance_exists(_inst) && _inst != -1) {
+		if (_inst.fully_grown == true) {
+			global.playerInventory.item_add( 
+				obj_crops_manager.ds_crops_types[# 5, _inst.crop_type],
+				1,
+				_spr_id
+			)
+			instance_destroy(_inst)
+			obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell] = -1
+		 
+		} 
+		
+	}
+}
+
+function harvest_one_on_cell(_x_cell, _y_cell){ 
+	if (room != rFarming || _x_cell < 0 || _y_cell < 0) exit;
+	//TODO: Change sprite base on Crop type 
+	var _spr_id = sCarot
+	
+	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
+	if (instance_exists(_inst) && _inst != -1) {
+		if (_inst.fully_grown == true) {
+			global.playerInventory.item_add( 
+				obj_crops_manager.ds_crops_types[# 5, _inst.crop_type],
+				1,
+				_spr_id
+			)
+			instance_destroy(_inst)
+			obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell] = -1
+		 
+		} 
+		
+	}
+}
+
+function harvest_many(_x, _y, _tl, _t, _tr, _r, _br, _b, _bl, _l){ 
+	if (room != rFarming) exit;
+	
+	var _x_cell = _x div obj_crops_manager.cell_size
+	var _y_cell = _y div obj_crops_manager.cell_size
+	
+	repeat(_tl) {
+		harvest_one_on_cell(_x_cell - 1, _y_cell - 1)
+	}
+	
+	repeat(_t) {
+		harvest_one_on_cell(_x_cell, _y_cell - 1)
+	}
+	
+	repeat(_tr) {
+		harvest_one_on_cell(_x_cell + 1, _y_cell - 1)
+	}
+	
+	repeat(_r) {
+		harvest_one_on_cell(_x_cell + 1, _y_cell)
+	}
+	
+	repeat(_br) {
+		harvest_one_on_cell(_x_cell + 1, _y_cell + 1)
+	}
+	
+	repeat(_b) {
+		harvest_one_on_cell(_x_cell, _y_cell + 1)
+	}
+	
+	repeat(_bl) {
+		harvest_one_on_cell(_x_cell - 1, _y_cell + 1)
+	}
+	
+	repeat(_l) {
+		harvest_one_on_cell(_x_cell - 1, _y_cell)
+	}
+}
+
+function crop_destroy(_x, _y) {
+	if (room != rFarming) exit;
+	var _x_cell = _x div obj_crops_manager.cell_size
+	var _y_cell = _y div obj_crops_manager.cell_size
+	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
+	
+	if (instance_exists(_inst) && _inst != -1) {
+		instance_destroy(_inst)
+		obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell] = -1	
+	}
 }

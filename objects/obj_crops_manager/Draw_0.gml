@@ -20,7 +20,7 @@ var _c = c_green
 //var _data = tilemap_get_at_pixel(_map_id, _xx, _yy)
 //if _data != 0 _c = c_white
 //NOTICE: Error w
-if ds_crops_instances[# _gx, _gy] != 0 {
+if ds_crops_instances[# _gx, _gy] != -1 {
 	_c = c_red
 }  
 draw_rectangle_color(_xx,_yy,_xx + cell_size, _yy + cell_size, _c,_c,_c,_c, true)

@@ -22,8 +22,7 @@ if (room == rFarming and instance_exists(obj_crop)) {
 				}
 			
 				//change is_watered to false if it it at midnight
-				//TODO: uncoment the below 
-				//if (floor(obj_day_cycle.hours) == 0) is_watered = false
+				if (floor(obj_day_cycle.hours) == 0) is_watered = false
 			
 				sprite_num = get_crop_spr_num(exp_point, _state_5_exp, max_sprite_num); //set sprite base on cur_exp/max_exp 
 				//NOTICE!!Sprite may not reflect the current stage, this is by design (aka a feature not error)
@@ -61,15 +60,16 @@ if (room == rFarming and instance_exists(obj_crop)) {
 			var _state_4_exp = _types[# 3, _crop_type]
 			var _state_5_exp = _types[# 4, _crop_type] //aka max_exp
 		
-			if (ds_crops_data[# 3,_i] < _state_1_exp) ds_crops_data[# 3,_i] += 50
-			else {
-				if ds_crops_data[# 4,_i] {
-						ds_crops_data[# 3,_i] +=50 
+			if (ds_crops_data[# 3,_i] < _state_5_exp) {//is not harvestable
+				if (ds_crops_data[# 3,_i] < _state_1_exp) ds_crops_data[# 3,_i] += 50
+				else {
+					if ds_crops_data[# 4,_i] {
+							ds_crops_data[# 3,_i] +=50 
+					}
 				}
+				//change is_watered to false if it it at midnight
+				if (floor(obj_day_cycle.hours) == 0) ds_crops_data[# 4,_i] = false
 			}
-			//change is_watered to false if it it at midnight
-			//TODO: uncoment the below 
-			//if (floor(obj_day_cycle.hours) == 0) ds_crops_data[# 4,_i] = false
 		}
 		_i += 1
 	} 
