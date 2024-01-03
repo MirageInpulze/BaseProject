@@ -146,6 +146,7 @@
     {"name":"spr_purple_lettuce_seed","order":8,"path":"sprites/spr_purple_lettuce_seed/spr_purple_lettuce_seed.yy",},
     {"name":"spr_button_0","order":2,"path":"sprites/spr_button_0/spr_button_0.yy",},
     {"name":"tCollision_1","order":3,"path":"tilesets/tCollision_1/tCollision_1.yy",},
+    {"name":"TilesRelated","order":17,"path":"scripts/TilesRelated/TilesRelated.yy",},
     {"name":"rm_load_game_menu","order":1,"path":"rooms/rm_load_game_menu/rm_load_game_menu.yy",},
     {"name":"sAttackCure","order":1,"path":"sprites/sAttackCure/sAttackCure.yy",},
     {"name":"obj_button_new_game","order":5,"path":"objects/obj_button_new_game/obj_button_new_game.yy",},

@@ -176,6 +176,7 @@
     {"id":{"name":"tTiles","path":"tilesets/tTiles/tTiles.yy",},},
     {"id":{"name":"spr_button_0","path":"sprites/spr_button_0/spr_button_0.yy",},},
     {"id":{"name":"tCollision_1","path":"tilesets/tCollision_1/tCollision_1.yy",},},
+    {"id":{"name":"TilesRelated","path":"scripts/TilesRelated/TilesRelated.yy",},},
     {"id":{"name":"rm_load_game_menu","path":"rooms/rm_load_game_menu/rm_load_game_menu.yy",},},
     {"id":{"name":"sAttackCure","path":"sprites/sAttackCure/sAttackCure.yy",},},
     {"id":{"name":"obj_button_new_game","path":"objects/obj_button_new_game/obj_button_new_game.yy",},},
