@@ -71,20 +71,23 @@ if (!global.is_open_shopping_panel){
 				_plant_id = 25;
 			break;
 			case "Broccoflower Seeds": 
-				_plant_id = 26;
+				_plant_id = -1;
+				show_debug_message("Broccoflower has harvested sprite, so cant be planted")
 			break;
 			case "Pumpkin Seeds": 
 				_plant_id = 30;
 			break;
 			
 			default:
-			show_debug_message("not a seed")
+			
 			break;
 		}
 		
 		if (_plant_id != -1) {
-			instance_create_crop(x,y, _plant_id)
-			//TODO: subtract the crop seed in inventory
+			var _name = global.itemChosen.name
+			var _inst = instance_create_crop(x,y, _plant_id)
+			if (_inst) global.playerInventory.item_subtract(_name,1)
+			
 		}
 	
 	}

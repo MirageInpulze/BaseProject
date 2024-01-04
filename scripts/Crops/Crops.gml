@@ -221,21 +221,20 @@ function water_crop(_x, _y){
 	var _y_cell = _y div obj_crops_manager.cell_size
 	
 	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
-	if (instance_exists(_inst)) {
+	if (instance_exists(_inst) and _inst != -1 and _inst.is_watered == false) {
 		_inst.is_watered = true
 	}
 
 }
 
 function harvest_one(_x, _y){ 
-	
 	if (room != rFarming) exit;
 	
 	var _x_cell = _x div obj_crops_manager.cell_size
 	var _y_cell = _y div obj_crops_manager.cell_size
 	
 	//TODO: Change sprite base on Crop type 
-	var _spr_id = sCarot
+	
 	
 	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
 	if (instance_exists(_inst) && _inst != -1) {
@@ -243,8 +242,9 @@ function harvest_one(_x, _y){
 			global.playerInventory.item_add( 
 				obj_crops_manager.ds_crops_types[# 5, _inst.crop_type],
 				1,
-				_spr_id
+				obj_crops_manager.ds_crops_types[# 7, _inst.crop_type]
 			)
+			show_debug_message("crop type:"+ string(_inst.crop_type) )
 			instance_destroy(_inst)
 			obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell] = -1
 		 
@@ -256,15 +256,13 @@ function harvest_one(_x, _y){
 function harvest_one_on_cell(_x_cell, _y_cell){ 
 	if (room != rFarming || _x_cell < 0 || _y_cell < 0) exit;
 	//TODO: Change sprite base on Crop type 
-	var _spr_id = sCarot
-	
 	var _inst = obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell]
 	if (instance_exists(_inst) && _inst != -1) {
 		if (_inst.fully_grown == true) {
 			global.playerInventory.item_add( 
 				obj_crops_manager.ds_crops_types[# 5, _inst.crop_type],
 				1,
-				_spr_id
+				obj_crops_manager.ds_crops_types[# 7, _inst.crop_type]
 			)
 			instance_destroy(_inst)
 			obj_crops_manager.ds_crops_instances[# _x_cell, _y_cell] = -1
@@ -280,6 +278,7 @@ function harvest_many(_x, _y, _tl, _t, _tr, _r, _br, _b, _bl, _l){
 	var _x_cell = _x div obj_crops_manager.cell_size
 	var _y_cell = _y div obj_crops_manager.cell_size
 	
+	harvest_one_on_cell(_x_cell, _y_cell)
 	repeat(_tl) {
 		harvest_one_on_cell(_x_cell - 1, _y_cell - 1)
 	}

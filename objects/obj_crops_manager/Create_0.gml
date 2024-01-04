@@ -18,16 +18,6 @@ ds_crops_types = -1
 //Statge 3 = budding
 //Statge 4 = flowering
 //Statge 5 = ripening (harvestable)
-//The shape of the table:
-//Each row is a type of crop and its info
-//col 1 is the exp point to get to stage 1
-//col 2 is the exp point to get to stage 2
-//col 3 is the exp point to get to stage 3
-//col 4 is the exp point to get to stage 4
-//col 5 is the exp point to get to stage 5
-//col 6 is the name of the crop
-//col 7 is the seed price
-//TODO: and more to came
 
 ds_crops_instances = -1 
 // save the location of cell that already have a crop planted, so that another crop cant be planted on top of that 
@@ -105,41 +95,52 @@ selected_crop = 0 //correspond to enum above
 
 //insert the info of a crop to the table
 //again, the order is important, should correspond to the order of crop in the sprite
+//The shape of the table:
+//Each row is a type of crop and its info
+//col 1 is the exp point to get to stage 1
+//col 2 is the exp point to get to stage 2
+//col 3 is the exp point to get to stage 3
+//col 4 is the exp point to get to stage 4
+//col 5 is the exp point to get to stage 5
+//col 6 is the name of the crop
+//col 7 is the seed price
+//col 8 is sprite_id of harvested crops
+//TODO: and more to came
 
-create_crop_type(100,200,300,400,500,"Carrot", 70)  //this is the info of the carrot
-create_crop_type(100,100,100,100,100,"crop2", 700)
-create_crop_type(100,100,100,100,100,"crop3", 700)
-create_crop_type(100,100,100,100,100,"crop4", 700)
-create_crop_type(100,200,250,300,400,"Lettuce", 100)
-create_crop_type(100,100,100,100,100,"crop6", 700)
-create_crop_type(100,200,250,300,400,"Purple Lettuce", 300)
-create_crop_type(100,100,100,100,100,"crop8", 700)
-create_crop_type(100,200,400,700,800,"Wheat", 100)
-create_crop_type(100,200,400,700,900,"Eggplant", 100)
-create_crop_type(100,100,100,100,100,"crop11", 0)
-create_crop_type(100,100,100,100,100,"crop12", 0)
-create_crop_type(100,100,100,100,100,"crop13", 0)
-create_crop_type(100,100,100,100,100,"crop14", 0)
-create_crop_type(100,100,100,100,100,"crop15", 0)
-create_crop_type(100,100,100,100,100,"crop16", 0)
-create_crop_type(100,100,100,100,100,"crop17", 0)
-create_crop_type(100,300,400,500,600,"Icy Sunflower", 1200)
-create_crop_type(100,100,100,100,100,"crop19", 0)
-create_crop_type(100,200,300,500,600,"Sunflower", 200)
-create_crop_type(100,200,300,500,700,"Green Pepper", 300)
-create_crop_type(100,100,100,100,100,"crop22", 0)
-create_crop_type(100,100,100,100,100,"crop23", 0)
-create_crop_type(100,200,300,400,450,"Purple Cabbage", 300)
-create_crop_type(100,100,100,100,100,"crop25", 0)
-create_crop_type(100,150,250,300,350,"Raddish", 300)
-create_crop_type(100,200,300,400,450,"Broccoflower", 500)
-create_crop_type(100,100,100,100,100,"crop28", 0)
-create_crop_type(100,100,100,100,100,"crop29", 0)
-create_crop_type(100,100,100,100,100,"crop30", 0)
-create_crop_type(100,300,500,800,1000,"Pumpkin", 7000)
-create_crop_type(100,100,100,100,100,"crop32", 0)
-create_crop_type(100,100,100,100,100,"crop33", 0)
-create_crop_type(100,100,100,100,100,"crop34", 0)
+create_crop_type(100,200,300,400,500,"Carrot", 70, spr_carrot_crop)  //this is the info of the carrot
+create_crop_type(100,100,100,100,100,"crop2", 700, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop3", 700, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop4", 700, spr_carrot_crop)
+create_crop_type(100,200,250,300,400,"Lettuce", 100, spr_lettuce_crop)
+create_crop_type(100,100,100,100,100,"crop6", 700, spr_carrot_crop)
+create_crop_type(100,200,250,300,400,"Purple Lettuce", 300, spr_purple_lettuce_crop)
+create_crop_type(100,100,100,100,100,"crop8", 700, spr_carrot_crop)
+create_crop_type(100,200,400,700,800,"Wheat", 100, spr_wheat_crop)
+create_crop_type(100,200,400,700,900,"Eggplant", 100, spr_eggplant_crop)
+create_crop_type(100,100,100,100,100,"crop11", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop12", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop13", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop14", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop15", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop16", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop17", 0, spr_carrot_crop)
+create_crop_type(100,300,400,500,600,"Icy Sunflower", 120, spr_icy_sunflower_crop)
+create_crop_type(100,100,100,100,100,"crop19", 0, spr_carrot_crop)
+create_crop_type(100,200,300,500,600,"Sunflower", 200, spr_sunflower_crop)
+create_crop_type(100,200,300,500,700,"Green Pepper", 300, spr_green_pepper_crop)
+create_crop_type(100,100,100,100,100,"crop22", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop23", 0, spr_carrot_crop)
+create_crop_type(100,200,300,400,450,"Purple Cabbage", 300, spr_purple_cabbage_crop)
+create_crop_type(100,100,100,100,100,"crop25", 0, spr_carrot_crop)
+create_crop_type(100,150,250,300,350,"Raddish", 300, spr_carrot_crop)
+create_crop_type(100,200,300,400,450,"Broccoflower", 500, spr_carrot_crop)// no sprite
+create_crop_type(100,100,100,100,100,"crop28", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop29", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop30", 0, spr_carrot_crop)
+create_crop_type(100,300,500,800,1000,"Pumpkin", 7000, spr_pumpkin_crop)
+create_crop_type(100,100,100,100,100,"crop32", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop33", 0, spr_carrot_crop)
+create_crop_type(100,100,100,100,100,"crop34", 0, spr_carrot_crop)
 
 mx = 0;
 my = 0;

@@ -7,10 +7,9 @@
 seconds = 6 * 60 * 60;
 minutes = 0;
 display_min = 0;
-display_hour= 0
-hours = 0;
-weather = 0; //TODO: 
-//Start at Summer
+display_hour= 6
+hours = 6;
+weather = 0;
 day = 1
 month = 4
 enum SEASON {
