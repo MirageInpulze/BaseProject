@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Draw the grid to debug
+/**
 if (room == rFarming) {
 	var _xx = 0
 	var _cs = obj_crops_manager.cell_size
@@ -25,3 +26,4 @@ if (room == rFarming) {
 	draw_set_alpha(1)
 
 }
+**/
