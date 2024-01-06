@@ -60,7 +60,7 @@ show_debug_message(global.playerInventory)
 //}
 
 global.itemChosen = global.playerInventory._inventory_items[0]
-
+i_selected = 0
 
 
 
