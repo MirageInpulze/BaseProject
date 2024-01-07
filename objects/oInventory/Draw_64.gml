@@ -5,6 +5,10 @@ if(global.chestOpened && !global.char_leave){
 	exit
 }
 
+if(global.game_paused) exit;
+if(room == rm_main_menu_new || room == rm_about_menu || room == rm_load_game_menu
+	|| room == rm_new_game_menu || room == rm_save_game_menu || room == rm_settings_menu) exit;
+
 //global.char_leave = false
 
 if(!show_inv){

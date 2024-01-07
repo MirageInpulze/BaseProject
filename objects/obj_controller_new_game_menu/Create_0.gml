@@ -4,8 +4,9 @@
 // 0 for male, 1 for female
 character_selected = 0;
 
-character_name = "";
-farm_name = "";
+global.character_name = "";
+global.farm_name = "";
+money = 0;
 
 
 

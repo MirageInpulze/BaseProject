@@ -3,6 +3,9 @@
 // Call the instance_create_crop() to plant the crop in a specific location
 //TODO: if(room != rm_farm) {is_planting = false: exit};
 
+if (room != rFarming) exit;
+
+
 if (room == rFarming and keyboard_check_pressed(ord("P"))) {is_planting = !is_planting}
 
 if(is_planting) {

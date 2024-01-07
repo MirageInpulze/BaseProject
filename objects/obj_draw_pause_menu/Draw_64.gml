@@ -51,11 +51,13 @@ if (pause_settings)
 	for (var i = 0; i < array_length(pause_settings_option); i++)
 	{
 		var _print = "";
+		pause_settings_option[0] = "BGM volume: " + string(bgm_volume_value) + "%";
+		pause_settings_option[1] = "SFX volume: " + string(sfx_volume_value) + "%";
 		if (i == pause_settings_option_selected)
 		{
 			_print += "> " + pause_settings_option[i] + " <";
 		}
-		else if(window_get_fullscreen() && i == 3)
+		else if(window_get_fullscreen() && i == 3) // Make window size settings unavailable if game is full screen
 		{
 			_print += pause_settings_option[i];
 			draw_set_alpha(0.3);

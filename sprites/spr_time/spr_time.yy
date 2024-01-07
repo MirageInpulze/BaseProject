@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "BaseProject_demo",
-    "path": "BaseProject_demo.yyp",
+    "name": "BaseProject_1644_07_Jan_2024",
+    "path": "BaseProject_1644_07_Jan_2024.yyp",
   },
   "preMultiplyAlpha": false,
   "sequence": {

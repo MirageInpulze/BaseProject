@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(global.game_paused) exit;
+if(room == rm_main_menu_new || room == rm_about_menu || room == rm_load_game_menu
+	|| room == rm_new_game_menu || room == rm_save_game_menu || room == rm_settings_menu) exit;
+
 //Lightting base on daytime
 if (room == rFarming) {
 	var _c = light_color

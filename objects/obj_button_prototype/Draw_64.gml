@@ -10,7 +10,7 @@ draw_set_font(fnt_text);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(make_color_rgb(66, 37, 1));
-draw_text(x, y, button_text);
+draw_text(x_difference, y_difference, button_text);
 
 
 draw_set_halign(fa_left);

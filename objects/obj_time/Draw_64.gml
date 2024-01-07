@@ -2,6 +2,8 @@
 // You can write your code in this editor
 //draw_self()
 
+if(global.game_paused) exit
+
 gui_height = display_get_gui_height()
 gui_width = display_get_gui_width()
 

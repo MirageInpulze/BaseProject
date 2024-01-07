@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.currentMoney = 20000;
+// global.currentMoney = 20000;
 
 depth = -1
 scale = 2
@@ -35,17 +35,22 @@ inv_slot_size = (111 * inv_gui_scale * scale)
 
 //ds_inv[] 
 
-global.playerInventory = new Inventory() 
+// Add new items if game is not loaded
+
 
 //image_index+=1
 //image_number=1
 
-global.playerInventory.item_add("Axe", 1, sAxe)
-global.playerInventory.item_add("Hoe", 1, sHoe)
-global.playerInventory.item_add("Scythe", 1, sScythe)
-global.playerInventory.item_add("Shovel", 1, sShovel)
-global.playerInventory.item_add("Watering Can", 1, sWateringCan)
 
+if(!global.game_loaded)
+{
+	global.playerInventory = new Inventory(); 
+	global.playerInventory.item_add("Axe", 1, sAxe)
+	global.playerInventory.item_add("Hoe", 1, sHoe)
+	global.playerInventory.item_add("Scythe", 1, sScythe)
+	global.playerInventory.item_add("Shovel", 1, sShovel)
+	global.playerInventory.item_add("Watering Can", 1, sWateringCan)
+}
 
 //global.playerInventory.item_add("Carot", 64*(32-5), sCarot)
 
@@ -54,15 +59,15 @@ global.playerInventory.item_add("Watering Can", 1, sWateringCan)
 
 //global.playerInventory.item_subtract("wood",2)
 
-show_debug_message(global.playerInventory)
+// show_debug_message(global.playerInventory)
 
 //repeat(inv_slots){
 //}
 
 global.itemChosen = global.playerInventory._inventory_items[0]
+i_selected = 0
 
-
-
+show_debug_message(string(typeof(global.playerInventory)));
 
 
 

@@ -1,6 +1,8 @@
 //// Script assets have changed for v2.3.0 see
 //// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+
+
 function PlayerWalking()
 {
 	if (_inputM != 0)
@@ -20,6 +22,8 @@ vSpeed = lengthdir_y(spdWalk*_inputM,_inputD);
 PlayerCollision();
 sprite_index = spriteWalk;
 FourDirectionAnimate();
+
+
 
 
 	if (keyRoll)
@@ -134,4 +138,3 @@ function PlayerCollided()
 		state = PlayerWalking;
 	}
 }
-

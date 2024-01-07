@@ -1,10 +1,12 @@
-/// @description Pause the game and update mouse mode
+/// @description Pause the game
 // You can write your code in this editor
 
-if(keyboard_check_pressed(vk_escape))
+if(keyboard_check_pressed(vk_escape)) && (room != rm_title) && (room != rm_main_menu_new) 
+	&& (room != rm_new_game_menu) && (room != rm_save_game_menu) && (room != rm_load_game_menu)
+	&& (room != rm_about_menu) && (room != rm_settings_menu)
 {
 	global.game_paused = !global.game_paused;
-	
+	/*
 	if(global.game_paused)
 	{
 		with (all)
@@ -20,7 +22,7 @@ if(keyboard_check_pressed(vk_escape))
 			image_speed = game_paused_image_speed;
 		}
 	}
-	
+	*/
 }
 
 // get distance from fake mouse to real mouse
@@ -30,7 +32,7 @@ var _moving = point_distance(mx, my, mouse_x, mouse_y);
 mx = mouse_x;
 my = mouse_y;
 
-// if they are apart
+// If mouse is moving. Note: mouse_mode is true until a key is pressed
 if (_moving) 
 {
 	global.mouse_mode = true;

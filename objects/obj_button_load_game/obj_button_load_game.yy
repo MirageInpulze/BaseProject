@@ -10,8 +10,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_prototype","path":"objects/obj_button_prototype/obj_button_prototype.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_prototype/obj_button_prototype.yy",},"value":"Load game",},
   ],
   "parent": {
-    "name": "Menu Components_Long",
-    "path": "folders/Objects/Menu Components_Long.yy",
+    "name": "Main Menu",
+    "path": "folders/Objects/Menu Components_Long/Main Menu.yy",
   },
   "parentObjectId": {
     "name": "obj_button_prototype",

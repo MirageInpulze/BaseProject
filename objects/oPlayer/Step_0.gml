@@ -1,3 +1,4 @@
+if(global.game_paused) exit;
 if (!global.is_open_shopping_panel){
 	_inputH = keyboard_check(vk_right) - keyboard_check(vk_left);
 	_inputV = keyboard_check(vk_down) - keyboard_check(vk_up);
@@ -14,26 +15,12 @@ if (!global.is_open_shopping_panel){
 	depth = -bbox_bottom
 	//TODO: tiles bug after Removing garden
 	if(keyboard_check_pressed(ord("J")) && global.itemChosen.name == "Hoe"){
-		var lay_id = layer_get_id("Tiles_1");
-		var map_id = layer_tilemap_get_id(lay_id);
-		show_debug_message("presssing")
-		var i = tilemap_get_at_pixel(map_id, oPlayer.x, oPlayer.y)
-
-		if(i == 141 ){
-			tilemap_set_at_pixel(map_id, 102, oPlayer.x, oPlayer.y);
-		}
+		ChangeTile("Tiles_2", 12, 141, oPlayer.x, oPlayer.y)
+		ChangeTile("Tiles_1", 12, 141, oPlayer.x, oPlayer.y)
 	}
 
 
 	if(keyboard_check_pressed(ord("J")) && global.itemChosen.name == "Watering Can"){
-		var lay_id = layer_get_id("Tiles_1");
-		var map_id = layer_tilemap_get_id(lay_id);
-	
-		var i = tilemap_get_at_pixel(map_id, oPlayer.x, oPlayer.y)
-
-		if(i == 102){
-			tilemap_set_at_pixel(map_id, 1, oPlayer.x, oPlayer.y);
-		}
 		
 		//check if these is crop and water it 
 		water_crop(x,y)
@@ -84,10 +71,13 @@ if (!global.is_open_shopping_panel){
 		}
 		
 		if (_plant_id != -1) {
-			var _name = global.itemChosen.name
-			var _inst = instance_create_crop(x,y, _plant_id)
-			if (_inst) global.playerInventory.item_subtract(_name,1)
-			
+			if(CheckTile("Tiles_2", 141, oPlayer.x, oPlayer.y) || CheckTile("Tiles_1", 141, oPlayer.x, oPlayer.y)){
+				var _inst = instance_create_crop(x,y, _plant_id)
+				//TODO: subtract the crop seed in inventory
+				if(_inst){
+					global.playerInventory.item_subtract(global.itemChosen.name, 1)
+				}
+			}
 		}
 	
 	}

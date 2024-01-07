@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Menus_Long",
-    "path": "folders/Objects/Menus_Long.yy",
+    "name": "Managers_Long",
+    "path": "folders/Objects/Managers_Long.yy",
   },
   "parentObjectId": null,
   "persistent": false,

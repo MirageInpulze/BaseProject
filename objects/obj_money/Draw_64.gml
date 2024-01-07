@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(global.game_paused) exit;
+
 gui_witdh = display_get_gui_width()
 gui_height = display_get_gui_height()
 

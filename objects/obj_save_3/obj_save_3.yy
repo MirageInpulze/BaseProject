@@ -1,0 +1,41 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_save_3",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_save_field_prototype","path":"objects/obj_save_field_prototype/obj_save_field_prototype.yy",},"propertyId":{"name":"button_text","path":"objects/obj_save_field_prototype/obj_save_field_prototype.yy",},"value":"Save 3",},
+  ],
+  "parent": {
+    "name": "Save Game Menu",
+    "path": "folders/Objects/Menu Components_Long/Save Game Menu.yy",
+  },
+  "parentObjectId": {
+    "name": "obj_save_field_prototype",
+    "path": "objects/obj_save_field_prototype/obj_save_field_prototype.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_save_field",
+    "path": "sprites/spr_save_field/spr_save_field.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}

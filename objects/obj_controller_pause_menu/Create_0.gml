@@ -6,7 +6,7 @@ load_game_menu = false;
 settings_menu = false;
 about_menu = false;
 
-pause_menu_option = [obj_button_continue, obj_button_save_game, obj_button_load_game, obj_button_settings, obj_button_return, obj_button_exit]
+pause_menu_option = [obj_button_continue, obj_button_save_game_in_save_menu, obj_button_load_game, obj_button_settings, obj_button_return_from_save, obj_button_exit]
 
 //"Continue", "Save game", "Load game", "Settings", "Return to main menu", "Exit"
 
