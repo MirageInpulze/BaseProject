@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "sSlime",
-    "path": "sprites/sSlime/sSlime.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
