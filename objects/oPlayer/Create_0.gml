@@ -1,5 +1,4 @@
 state = PlayerWalking;
-stateAttack = AttackSlash;
 hitByAttack = -1;
 lastState = state;
 

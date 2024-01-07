@@ -21,12 +21,6 @@ PlayerCollision();
 sprite_index = spriteWalk;
 FourDirectionAnimate();
 
-	if (keyAttack)
-	{
-		state = PlayerAttack;
-		stateAttack = AttackSlash;
-	}
-
 
 	if (keyRoll)
 	{
@@ -141,7 +135,3 @@ function PlayerCollided()
 	}
 }
 
-function PlayerAttack()
-{
-	script_execute(stateAttack)
-}
