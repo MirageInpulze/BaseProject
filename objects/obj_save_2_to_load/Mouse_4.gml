@@ -14,7 +14,7 @@ obj_save_3_to_load.is_selected = false;
 
 load_game(1);
 
-
+global.game_paused = false;
 // Inherit the parent event
 event_inherited();
 

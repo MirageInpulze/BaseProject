@@ -19,6 +19,7 @@ global.FirstItemInZone = 1;
 global.shopping_panel_x = x;
 global.shopping_panel_y = y;
 global.is_open_shopping_pop_up = false;
+global.is_shopping = true;
 
 // create row
 global.currentSeason = 2;

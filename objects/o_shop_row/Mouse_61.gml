@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (global.is_shopping){
+
 if (!global.is_open_shopping_pop_up){
 	if (global.LastItemInZone == 0){
 		y-= panel_height/4 - 2.5;
@@ -10,9 +12,13 @@ if (!global.is_open_shopping_pop_up){
 	}
 
 	self.layer = layer_get_id("hidden_layer")
+	self.is_displayed=false;
 	if (y < global.shoppingPanelEnd && y > global.shoppingPanelStart) {
 	self.layer = layer_get_id("shopping_panel_content")
+	self.is_displayed=true;
 	}
 
 	show_debug_message("wheel down one time")
+}
+
 }

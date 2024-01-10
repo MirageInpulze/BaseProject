@@ -68,6 +68,36 @@ function load_game(_slot){
 	{
 		show_debug_message("Inventory file not found")
 	}
+	
+	
+	
+	// Load chest
+	var _chest_file = "chest" + string(global.game_save_slot) + ".sav";
+	if(file_exists(_chest_file))
+	{
+		// Remove current chest data
+		//with(global.chestInventory) instance_destroy();
+		global.chestInventory1 = new Inventory();
+		// Load chest
+		var _chest_buffer = buffer_load(_chest_file);
+		var _chest_string = buffer_read(_chest_buffer, buffer_string);
+		buffer_delete(_chest_buffer);
+		show_debug_message(_chest_string);
+		var _chest_load_data = json_parse(_chest_string);
+		show_debug_message(string(typeof(_chest_load_data)));
+		while(array_length(_chest_load_data) > 0)
+		{
+			var _chest_load_entity = array_pop(_chest_load_data);
+			// show_debug_message(string(typeof(_chest_load_entity)));
+			show_debug_message(string(_chest_load_entity));
+			global.chestInventory1.item_add(_chest_load_entity.name, _chest_load_entity.quantity, _chest_load_entity.sprite);
+			
+		}
+	}
+	else
+	{
+		show_debug_message("Chest file not found")
+	}
 	global.game_loaded = true;
 	
 	

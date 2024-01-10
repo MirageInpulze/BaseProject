@@ -27,7 +27,7 @@ if(obj_day_cycle.season == SEASON.SPRING){
 	season = "Winter"
 }
 
-draw_text_color(gui_width - 80, 3, "Day " + string(obj_day_cycle.day) + " , " + season, col, col ,col ,col ,1)
+draw_text_color(gui_width - 80, 3, "Day" + string(obj_day_cycle.day) + ", " + season, col, col ,col ,col ,1)
 
 
 if(obj_day_cycle.hours < 10 && obj_day_cycle.display_min < 10){

@@ -18,6 +18,7 @@ global.window_width = 1280;
 global.window_height = 720;
 
 global.playerInventory = new Inventory();
+global.chestInventory1 = new Inventory();
 
 global.game_loaded = false;
 
@@ -38,6 +39,6 @@ calculate_window_position(display_get_width(), display_get_height(), global.wind
 
 
 
-
-
+// shopping check
+global.is_shopping = false;
 

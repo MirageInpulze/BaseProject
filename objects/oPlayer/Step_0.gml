@@ -36,6 +36,10 @@ if (!global.is_open_shopping_panel){
 			case "Lettuce Seeds": 
 				_plant_id = 4;
 			break;
+			
+			case "Purple Lettuce Seeds": 
+				_plant_id = 6;
+			break;
 			case "Wheat Seeds": 
 				_plant_id = 8;
 			break;
@@ -58,22 +62,19 @@ if (!global.is_open_shopping_panel){
 				_plant_id = 25;
 			break;
 			case "Broccoflower Seeds": 
-				_plant_id = -1;
-				show_debug_message("Broccoflower has harvested sprite, so cant be planted")
+				_plant_id = 26;
 			break;
 			case "Pumpkin Seeds": 
 				_plant_id = 30;
 			break;
 			
 			default:
-			
 			break;
 		}
 		
 		if (_plant_id != -1) {
 			if(CheckTile("Tiles_2", 141, oPlayer.x, oPlayer.y) || CheckTile("Tiles_1", 141, oPlayer.x, oPlayer.y)){
 				var _inst = instance_create_crop(x,y, _plant_id)
-				//TODO: subtract the crop seed in inventory
 				if(_inst){
 					global.playerInventory.item_subtract(global.itemChosen.name, 1)
 				}

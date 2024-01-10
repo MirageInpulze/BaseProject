@@ -5,7 +5,7 @@
 global.game_save_slot = 0;
 save_game()
 
-
+global.game_paused = false;
 
 
 

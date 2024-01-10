@@ -15,19 +15,24 @@ if (room == rFarming) {
 	draw_set_alpha(1)
 }
 //debug text
-_c = c_yellow
-draw_set_font(fnt_text)
-draw_text_color(10, 10, "Sec: " + string(seconds), _c,_c,_c,_c, 1)
-draw_text_color(10, 20, "Min: " + string(minutes), _c,_c,_c,_c, 1)
-draw_text_color(10, 30, "Hour: "+ string(hours), _c,_c,_c,_c, 1)
-draw_text_color(10, 40, "Day: " + string(day), _c,_c,_c,_c, 1)
-draw_text_color(10, 50, "Month: " + string(month), _c,_c,_c,_c, 1)
-draw_text_color(10, 60, "Season:" + string(season), _c,_c,_c,_c, 1)
-draw_text_color(10, 70, "Year:" + string(year), _c,_c,_c,_c, 1)
-draw_text_color(10, 80, "Planting: P", _c,_c,_c,_c, 1)
-draw_text_color(10, 90, "+12h: G", _c,_c,_c,_c, 1)
-draw_text_color(10, 100, "Start Time: F", _c,_c,_c,_c, 1)
-draw_text_color(10, 110, "Crop Dead: D", _c,_c,_c,_c, 1)
-draw_text_color(10, 120, "Harvest: C", _c,_c,_c,_c, 1)
-draw_text_color(10, 130, "Test Harvest Many: E", _c,_c,_c,_c, 1)
+if (room == rFarming && keyboard_check_pressed(ord("M"))) {
+	is_debug = !is_debug
+}
 
+if (is_debug) {
+	_c = c_yellow
+	draw_set_font(fnt_text)
+	draw_text_color(10, 10, "Sec: " + string(seconds), _c,_c,_c,_c, 1)
+	draw_text_color(10, 20, "Min: " + string(minutes), _c,_c,_c,_c, 1)
+	draw_text_color(10, 30, "Hour: "+ string(hours), _c,_c,_c,_c, 1)
+	draw_text_color(10, 40, "Day: " + string(day), _c,_c,_c,_c, 1)
+	draw_text_color(10, 50, "Month: " + string(month), _c,_c,_c,_c, 1)
+	draw_text_color(10, 60, "Season:" + string(season), _c,_c,_c,_c, 1)
+	draw_text_color(10, 70, "Year:" + string(year), _c,_c,_c,_c, 1)
+	draw_text_color(10, 80, "Planting: P", _c,_c,_c,_c, 1)
+	draw_text_color(10, 90, "+12h: G", _c,_c,_c,_c, 1)
+	draw_text_color(10, 100, "Start Time: F", _c,_c,_c,_c, 1)
+	draw_text_color(10, 110, "Crop Dead: D", _c,_c,_c,_c, 1)
+	draw_text_color(10, 120, "Harvest: C", _c,_c,_c,_c, 1)
+	draw_text_color(10, 130, "Test Harvest Many: E", _c,_c,_c,_c, 1)
+}

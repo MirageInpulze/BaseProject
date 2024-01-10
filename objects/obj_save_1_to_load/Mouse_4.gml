@@ -9,7 +9,7 @@ obj_save_3_to_load.is_selected = false;
 load_game(0);
 
 
-
+global.game_paused = false;
 
 
 

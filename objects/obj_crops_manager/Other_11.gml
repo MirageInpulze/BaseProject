@@ -14,10 +14,19 @@ if (room == rFarming and instance_exists(obj_crop)) {
 			var _state_5_exp = _types[# 4, crop_type] //aka max_exp
 		
 			if growth_stage < _max_growth_stage { //not harvestable
-				if (exp_point < _state_1_exp) exp_point += 50
+				if (exp_point < _state_1_exp){ 
+					
+					exp_point += 50
+					show_debug_message("grow but not water")
+					}
 				else {
 					if (is_watered) {
 						exp_point +=50 
+						show_debug_message("grow + water")
+
+					} else {
+						show_debug_message("not grow + not water")
+
 					}
 				}
 			

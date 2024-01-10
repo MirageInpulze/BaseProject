@@ -25,6 +25,7 @@ if(is_planting) {
 
 //Testing grow_state  
 if (keyboard_check_pressed(ord("G"))) {
+	show_debug_message("called ")
 	with(obj_crops_manager) {event_perform(ev_other, ev_user1)}
 	
 }

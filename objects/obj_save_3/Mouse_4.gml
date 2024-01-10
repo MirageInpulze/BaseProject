@@ -12,7 +12,7 @@ save_game()
 
 
 
-
+global.game_paused = false;
 
 
 // Inherit the parent event

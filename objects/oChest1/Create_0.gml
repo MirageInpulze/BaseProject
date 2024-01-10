@@ -34,7 +34,7 @@ inv_slot_size = (111 * inv_gui_scale * scale)
 global.player_chest1_collision = false 
 global.chestOpened = false
 
-global.chestInventory1 = new Inventory() 
+//global.chestInventory1 = new Inventory() 
 
 //global.chestInventory1.item_add("Wheat Seed", 64, sWheat)
 //global.chestInventory1.item_add("Carot Seed", 64, sCarot)

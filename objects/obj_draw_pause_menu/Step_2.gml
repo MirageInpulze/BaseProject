@@ -28,6 +28,8 @@ if (pause_main)
 	
 	pause_option_selected += (key_down - key_up);
 	
+	if (room == rFarming && pause_option_selected == 1) pause_option_selected += (key_down - key_up);// skip save if in rFarming
+	
 	if (pause_option_selected >= array_length(pause_option)) pause_option_selected = 0;
 	if (pause_option_selected < 0) pause_option_selected = array_length(pause_option) - 1;
 	

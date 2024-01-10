@@ -25,6 +25,11 @@ if (pause_main)
 		{
 			_print += "> " + pause_option[i] + " <";
 		}
+		else if(room == rFarming && i == 1) // Make save unavailable if rFarming
+		{
+			_print += pause_option[i];
+			draw_set_alpha(0.3);
+		}
 		else
 		{
 			_print += pause_option[i];

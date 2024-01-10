@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (global.is_shopping){
+
 if (!global.is_open_shopping_pop_up){
 if (y < global.shoppingPanelEnd && y > global.shoppingPanelStart && firstShopItem == 1) {
 	global.FirstItemInZone = 1;
@@ -18,8 +20,11 @@ if (global.FirstItemInZone == 0){
 	y+= panel_height/4 -2.5;
 }
 self.layer = layer_get_id("hidden_layer") 
+self.is_displayed = false
 if (y < global.shoppingPanelEnd && y > global.shoppingPanelStart) {
 self.layer = layer_get_id("shopping_panel_content")
+self.is_displayed = true;
 }
 }
 
+}

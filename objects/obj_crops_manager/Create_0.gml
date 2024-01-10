@@ -105,6 +105,8 @@ selected_crop = 0 //correspond to enum above
 //col 6 is the name of the crop
 //col 7 is the seed price
 //col 8 is sprite_id of harvested crops
+//col 9 is selling price
+
 //TODO: and more to came
 
 create_crop_type(100,200,300,400,500,"Carrot", 70, spr_carrot_crop)  //this is the info of the carrot

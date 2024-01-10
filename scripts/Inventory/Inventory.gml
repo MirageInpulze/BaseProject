@@ -3,6 +3,14 @@
 function Inventory() constructor {
 	_inventory_items = []
 	_max_qty = 64
+	_max_slot = 32
+	
+	chk_item_slots = function(){
+		if(array_length(_inventory_items) <= 32){
+			return true
+		}
+		return false
+	}
 	
 	item_set = function(_name, _quantity, _sprite) {
 		var i = (_quantity - _max_qty)

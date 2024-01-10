@@ -28,6 +28,11 @@ function save_game(){
 	save_string_to_file("inventory" + string(global.game_save_slot) + ".sav", _inventory_string);
 	show_debug_message(_inventory_string);
 	
+	// Save the chest in a separate file
+	var _chest_string = global.chestInventory1.toString();
+	save_string_to_file("chest" + string(global.game_save_slot) + ".sav", _chest_string);
+	show_debug_message(_chest_string);
+	
 	// Save crop in another separate file
 	var _crop_struct = grid_to_struct(obj_crops_manager.ds_crops_data);
 	var _crop_string = json_stringify(_crop_struct);

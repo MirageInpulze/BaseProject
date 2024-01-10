@@ -10,7 +10,8 @@ if (is_selected)
 	    // Check if the pressed key is a valid printable character
 	    if ((key >= 32 && key <= 126) || key == vk_space) {
 	        // Append the pressed key to the text_input variable
-	        text_input += chr(key);
+	        if ( string_length(text_input) <= 12 )
+			text_input += chr(key);
 	    } else if (key == vk_backspace) {
 	        // Remove the last character when backspace is pressed
 	        if (string_length(text_input) > 0) {
